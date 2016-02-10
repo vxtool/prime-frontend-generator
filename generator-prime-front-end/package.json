@@ -1,0 +1,22 @@
+{
+  "name": "generator-prime-front-end",
+  "version": "0.1.0",
+  "description": "Starting Front-end Project",
+  "homepage": "",
+  "author": {
+    "name": "Hemerson Vianna",
+    "email": "hemerson.lourenco@gmail.com",
+    "url": "http://hemersonvianna.io"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators\\index.js",
+  "keywords": [
+    "front",
+    "front-end",
+    "html",
+    "css",
+    "javascript"
+  ]
+}
