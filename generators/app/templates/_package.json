@@ -1,9 +1,20 @@
 {
     "name": "<%= name %>",
+    "version": "0.0.0",
+    "description": "",
     "scripts": {
         "start": ""
     },
     "dependencies": {
-
+    },
+    "devDependencies": {
+<% if (taskRunner === 'includeGrunt') { -%>
+      "grunt": ">=0.4.5",
+      "load-grunt-config": "^0.19.1"
+<% } -%>
+<% if (taskRunner === 'includeGulp') { -%>
+      "gulp": "^3.9.0",
+      "gulp-load-tasks": "^0.8.4"
+<% } -%>
     }
 }
