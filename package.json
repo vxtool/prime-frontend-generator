@@ -1,7 +1,7 @@
 {
   "name": "generator-prime-front-end",
   "version": "0.1.0",
-  "description": "Starting Front-end Project",
+  "description": "Starting Front-end Project with Yeoman",
   "license": "MIT",
   "main": "app/index.js",
   "homepage": "",
