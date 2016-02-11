@@ -15,6 +15,36 @@ module.exports = yeoman.generators.Base.extend({
       default: this.appname
     },
     {
+      type: 'confirm',
+      name: 'includeJQuery',
+      message: 'Would you like to include jQuery?',
+      default: true
+    },
+    {
+      when: function(responses) {
+        return responses.includeJQuery;
+      },
+      type: 'input',
+      name: 'jqueryVersion',
+      message: 'jQuery Version?',
+      default: 'latest'
+    },
+    {
+      type: 'confirm',
+      name: 'includeAngular',
+      message: 'Would you like to include AngularJS?',
+      default: true
+    },
+    {
+      when: function(responses) {
+        return responses.includeAngular;
+      },
+      type: 'input',
+      name: 'angularVersion',
+      message: 'AngularJS Version?',
+      default: 'latest'
+    },
+    {
       type: 'list',
       name: 'taskRunner',
       message: 'Which task runner would you like to use?',
@@ -57,8 +87,12 @@ module.exports = yeoman.generators.Base.extend({
         return features && features.indexOf(feat) !== -1;
       }
 
-      this.taskRunner = answers.taskRunner;
-      this.css = answers.css;
+      this.taskRunner     = answers.taskRunner;
+      this.css            = answers.css;
+      this.includeJQuery  = answers.includeJQuery;
+      this.jqueryVersion  = answers.jqueryVersion;
+      this.includeAngular = answers.includeAngular;
+      this.angularVersion = answers.angularVersion;
 
       done();
     }.bind(this));
@@ -96,11 +130,15 @@ module.exports = yeoman.generators.Base.extend({
       )
     },
 
-    config: function() {
+    bower: function() {
       this.fs.copyTpl(
         this.templatePath('_bower.json'),
         this.destinationPath('bower.json'), {
-          name: this.props.name
+          name: this.props.name,
+          includeJQuery: this.includeJQuery,
+          includeAngular: this.includeAngular,
+          jqueryVersion: this.jqueryVersion,
+          angularVersion: this.angularVersion
         }
       );
       this.fs.copy(
@@ -159,6 +197,13 @@ module.exports = yeoman.generators.Base.extend({
 
           break;
       }
+    },
+
+    robots: function () {
+      this.fs.copy(
+        this.templatePath('robots.txt'),
+        this.destinationPath('robots.txt')
+      );
     }
   },
   install: function() {
