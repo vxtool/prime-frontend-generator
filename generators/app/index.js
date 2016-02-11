@@ -28,6 +28,24 @@ module.exports = yeoman.generators.Base.extend({
         name: 'None',
         value: ''
       }]
+    },
+    {
+      type: 'list',
+      name: 'css',
+      message: 'Which type of css would you like to use?',
+      choices: [{
+        name: 'SCSS',
+        value: 'includeSCSS'
+      },{
+        name: 'Less',
+        value: 'includeLess'
+      },{
+        name: 'Stylus',
+        value: 'includeStylus'
+      },{
+        name: 'None',
+        value: ''
+      }]
     }];
 
     this.prompt(prompts, function(answers) {
@@ -40,6 +58,7 @@ module.exports = yeoman.generators.Base.extend({
       }
 
       this.taskRunner = answers.taskRunner;
+      this.css = answers.css;
 
       done();
     }.bind(this));
@@ -120,6 +139,24 @@ module.exports = yeoman.generators.Base.extend({
             this.templatePath('gulpjs/default.js'),
             this.destinationPath('source/tasks/gulpjs/default.js')
           );
+          break;
+      }
+    },
+
+    css: function () {
+
+      switch(this.css) {
+        case 'includeSCSS':
+          mkdirp('source/assets/scss');
+
+          break;
+        case 'includeLess':
+          mkdirp('source/assets/less');
+
+          break;
+        case 'includeStylus':
+          mkdirp('source/assets/styl');
+
           break;
       }
     }
