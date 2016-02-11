@@ -2,11 +2,5 @@
   "name": "<%= name %>",
   "version": "0.0.0",
   "dependencies": {
-<% if (includeJQuery) { -%>
-      "jquery": "<%= jqueryVersion && jqueryVersion !== 'latest' ? '~' + jqueryVersion : 'latest' %>",
-<% } -%>
-<% if (includeAngular) { -%>
-      "angular": "<%= angularVersion && angularVersion !== 'latest' ? '~' + angularVersion : 'latest' %>"
-<% } -%>
   }
 }

@@ -124,8 +124,12 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('_package.json'),
         this.destinationPath('package.json'),
         {
+          name: this.props.name,
           taskRunner: this.taskRunner,
-          name: this.props.name
+          includeJQuery: this.includeJQuery,
+          includeAngular: this.includeAngular,
+          jqueryVersion: this.jqueryVersion,
+          angularVersion: this.angularVersion
         }
       )
     },
@@ -134,11 +138,7 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copyTpl(
         this.templatePath('_bower.json'),
         this.destinationPath('bower.json'), {
-          name: this.props.name,
-          includeJQuery: this.includeJQuery,
-          includeAngular: this.includeAngular,
-          jqueryVersion: this.jqueryVersion,
-          angularVersion: this.angularVersion
+          name: this.props.name
         }
       );
       this.fs.copy(
