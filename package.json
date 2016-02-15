@@ -10,6 +10,13 @@
     "email": "hemerson.lourenco@gmail.com",
     "url": "http://hemersonvianna.io"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prime-solutions/prime-frontend-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prime-solutions/prime-frontend-generator/issues"
+  },
   "scripts": {
     "test": "mocha"
   },
