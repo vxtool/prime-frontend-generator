@@ -1,0 +1,26 @@
+$path-itcss: "../../vendor/prime-itcss/source/scss";
+
+@import "#{$path-itcss}/00-settings/_variables";
+@import "#{$path-itcss}/00-settings/_placeholders";
+
+@import "#{$path-itcss}/01-tools/_functions";
+@import "#{$path-itcss}/01-tools/_mixins";
+
+@import "#{$path-itcss}/02-generic/_reset";
+@import "#{$path-itcss}/02-generic/_box-sizing";
+//@import "#{$path-itcss}/02-generic/_normalize";
+
+@import "#{$path-itcss}/03-base/_fonts";
+@import "#{$path-itcss}/03-base/_page";
+@import "#{$path-itcss}/03-base/_images";
+
+//@import "#{$path-itcss}/04-vendor/";
+//@import "#{$path-itcss}/05-objects/";
+//@import "#{$path-itcss}/06-components/";
+
+@import "#{$path-itcss}/07-pages/_default";
+
+//@import "#{$path-itcss}/08-theme/";
+
+@import "#{$path-itcss}/09-trumps/_grid";
+@import "#{$path-itcss}/09-trumps/_print";
