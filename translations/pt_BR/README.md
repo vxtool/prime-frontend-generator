@@ -6,24 +6,24 @@
 [![npm](https://img.shields.io/npm/dt/generator-prime-frontend.svg?style=flat-square)](https://www.npmjs.com/package/generator-prime-frontend)
 [![devDependency Status](https://img.shields.io/david/dev/prime-solutions/prime-frontend-generator.svg?style=flat-square)](https://david-dm.org/prime-solutions/prime-frontend-generator#info=devDependencies)
 
-## Translations
+## Traduções
 
-* [Portuguese - Brazil](translations/pt_BR)
+* [ORIGINAL](https://github.com/prime-solutions/prime-frontend-generator/)
 
-## Install
+## Instalação
 
 ```
 npm install -g yo
 ```
 
-After:
+Depois: 
 
 ```
 npm install -g generator-prime-frontend
 ```
 - yo prime-frontend
 
-or
+ou
 
 - git clone
 - npm install
@@ -31,18 +31,18 @@ or
 - yo prime-frontend
 
 
-## Contributing
+## Contribuindo
 
-- Fork it!
-- Create your feature branch: `git checkout -b my-new-feature`
-- Commit your changes: `git commit -m 'Add some feature'`
-- Push to the branch: `git push origin my-new-feature`
-- Submit a pull request
+- Faça o fork!
+- Crie a sua branch feature: `git checkout -b my-new-feature`
+- Faça o commit das suas alterações: `git commit -m 'Add some feature'`
+- Faça o push para o servidor: `git push origin my-new-feature`
+- E realize o pull request
 
 ## Log
 
-Check [Releases](https://github.com/prime-solutions/prime-frontend-generator/releases) for detailed changelog.
+Verifique os [Releases](https://github.com/prime-solutions/prime-frontend-generator/releases) ver detalhado o log de alterações.
 
-## License
+## Licença
 
 [MIT license](http://hemersonvianna.mit-license.org/) © Hemerson Vianna
