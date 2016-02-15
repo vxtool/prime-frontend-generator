@@ -60,6 +60,15 @@ module.exports = yeoman.generators.Base.extend({
       }]
     },
     {
+      type: 'confirm',
+      name: 'includeItcss',
+      message: 'ITCSS metodology?',
+      default: true
+    },
+    {
+      when: function(responses) {
+        return responses.includeItcss;
+      },
       type: 'list',
       name: 'css',
       message: 'Which type of css would you like to use?',
@@ -93,6 +102,7 @@ module.exports = yeoman.generators.Base.extend({
       this.jqueryVersion  = answers.jqueryVersion;
       this.includeAngular = answers.includeAngular;
       this.angularVersion = answers.angularVersion;
+      this.includeItcss   = answers.includeItcss;
 
       done();
     }.bind(this));
@@ -138,7 +148,8 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copyTpl(
         this.templatePath('_bower.json'),
         this.destinationPath('bower.json'), {
-          name: this.props.name
+          name: this.props.name,
+          includeItcss: this.includeItcss
         }
       );
       this.fs.copy(
@@ -186,14 +197,26 @@ module.exports = yeoman.generators.Base.extend({
       switch(this.css) {
         case 'includeSCSS':
           mkdirp('source/assets/scss');
+          this.fs.copy(
+            this.templatePath('itcss/scss/style.scss'),
+            this.destinationPath('source/assets/scss/style.scss')
+          );
 
           break;
         case 'includeLess':
           mkdirp('source/assets/less');
+          this.fs.copy(
+            this.templatePath('itcss/less/style.less'),
+            this.destinationPath('source/assets/less/style.less')
+          );
 
           break;
         case 'includeStylus':
           mkdirp('source/assets/styl');
+          this.fs.copy(
+            this.templatePath('itcss/styl/style.styl'),
+            this.destinationPath('source/assets/styl/style.styl')
+          );
 
           break;
       }
@@ -206,7 +229,11 @@ module.exports = yeoman.generators.Base.extend({
       );
     }
   },
-  install: function() {
+  install: function () {
     this.installDependencies();
+  },
+
+  end: function () {
+
   }
 });
