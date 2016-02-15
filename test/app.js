@@ -5,7 +5,7 @@ var assert = require('yeoman-assert');
 var helpers = require('yeoman-generator').test;
 var os = require('os');
 
-describe('prime-front-end:app', function () {
+describe('prime-frontend:app', function () {
   before(function (done) {
     helpers.run(path.join(__dirname, '../generators/app'))
       .withOptions({someOption: true})

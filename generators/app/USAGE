@@ -9,7 +9,7 @@ Options:
   ReactJS: Include ReactJS
 
 Example:
-  yo prime-front-end
+  yo prime-frontend
 
   This will create:
     bower.json: Front-end packages installed by bower.

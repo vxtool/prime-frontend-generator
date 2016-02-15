@@ -1,7 +1,7 @@
-# Prime Front-end Generator
+# Prime Frontend Generator
 
 [![licence mit](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://hemersonvianna.mit-license.org/)
-[![issues](https://img.shields.io/github/issues/prime-solutions/prime-front-end-generator.svg?style=flat-square)](https://github.com/prime-solutions/prime-front-end-generator/issues)
+[![issues](https://img.shields.io/github/issues/prime-solutions/prime-frontend-generator.svg?style=flat-square)](https://github.com/prime-solutions/prime-frontend-generator/issues)
 
 ## Install
 
@@ -13,7 +13,7 @@ After:
 - git clone
 - npm install
 - npm link
-- yo prime-front-end
+- yo prime-frontend
 
 
 ## Contributing
@@ -26,7 +26,7 @@ After:
 
 ## Log
 
-Check [Releases](https://github.com/prime-solutions/prime-front-end-generator/releases) for detailed changelog.
+Check [Releases](https://github.com/prime-solutions/prime-frontend-generator/releases) for detailed changelog.
 
 ## License
 

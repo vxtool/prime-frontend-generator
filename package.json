@@ -1,5 +1,5 @@
 {
-  "name": "generator-prime-front-end",
+  "name": "generator-prime-frontend",
   "version": "0.1.0",
   "description": "Starting Front-end Project with Yeoman",
   "license": "MIT",
@@ -19,6 +19,7 @@
   "main": "generators\\index.js",
   "keywords": [
     "front",
+    "frontend",
     "front-end",
     "html",
     "css",
