@@ -112,19 +112,19 @@ module.exports = yeoman.generators.Base.extend({
   writing: {
     editorConfig: function () {
       this.fs.copy(
-        this.templatePath('editorconfig'),
+        this.templatePath('dot/editorconfig'),
         this.destinationPath('.editorconfig')
       );
     },
 
     git: function () {
       this.fs.copy(
-        this.templatePath('gitignore'),
+        this.templatePath('dot/gitignore'),
         this.destinationPath('.gitignore')
       );
 
       this.fs.copy(
-        this.templatePath('gitattributes'),
+        this.templatePath('dot/gitattributes'),
         this.destinationPath('.gitattributes')
       );
     },
@@ -153,7 +153,7 @@ module.exports = yeoman.generators.Base.extend({
         }
       );
       this.fs.copy(
-        this.templatePath('bowerrc'),
+        this.templatePath('dot/bowerrc'),
         this.destinationPath('.bowerrc')
       );
     },
@@ -170,7 +170,7 @@ module.exports = yeoman.generators.Base.extend({
         case 'includeGrunt':
           mkdirp('source/tasks/gruntjs');
           this.fs.copy(
-            this.templatePath('Gruntfile.js'),
+            this.templatePath('gruntjs/Gruntfile.js'),
             this.destinationPath('Gruntfile.js')
           );
           this.fs.copy(
@@ -181,7 +181,7 @@ module.exports = yeoman.generators.Base.extend({
         case 'includeGulp':
           mkdirp('source/tasks/gulpjs');
           this.fs.copy(
-            this.templatePath('Gulpfile.js'),
+            this.templatePath('gulpjs/Gulpfile.js'),
             this.destinationPath('Gulpfile.js')
           );
           this.fs.copy(
