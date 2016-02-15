@@ -2,6 +2,9 @@
 
 [![licence mit](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://hemersonvianna.mit-license.org/)
 [![issues](https://img.shields.io/github/issues/prime-solutions/prime-frontend-generator.svg?style=flat-square)](https://github.com/prime-solutions/prime-frontend-generator/issues)
+[![GitHub release](https://img.shields.io/github/release/prime-solutions/prime-frontend-generator.svg?style=flat-square)](https://github.com/prime-solutions/prime-frontend-generator/releases)
+[![npm](https://img.shields.io/npm/dt/generator-frontend-generator.svg?style=flat-square)](https://www.npmjs.com/package/generator-frontend-generator)
+[![devDependency Status](https://img.shields.io/david/dev/prime-solutions/prime-frontend-generator.svg?style=flat-square)](https://david-dm.org/prime-solutions/prime-frontend-generator#info=devDependencies)
 
 ## Install
 
