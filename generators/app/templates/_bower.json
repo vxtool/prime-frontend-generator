@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "dependencies": {
 <% if (includeItcss) { -%>
-    "prime-itcss": "https://github.com/prime-solutions/prime-itcss.git"
+    "prime-itcss": "https://github.com/prime-solutions/prime-itcss.git"<% if (includeCommonjs) { -%>,<% } -%>
+<% } -%>
+<% if (includeCommonjs) { -%>
+    "prime-commonjs": "https://github.com/prime-solutions/prime-commonjs.git"
 <% } -%>
   }
 }

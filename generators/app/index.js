@@ -85,6 +85,33 @@ module.exports = yeoman.generators.Base.extend({
         name: 'None',
         value: ''
       }]
+    },
+    {
+      when: function(responses) {
+        return !responses.includeItcss;
+      },
+      type: 'list',
+      name: 'css',
+      message: 'Which type of css would you like to use?',
+      choices: [{
+        name: 'SCSS',
+        value: 'includeSCSS'
+      },{
+        name: 'Less',
+        value: 'includeLess'
+      },{
+        name: 'Stylus',
+        value: 'includeStylus'
+      },{
+        name: 'None',
+        value: ''
+      }]
+    },
+    {
+      type: 'confirm',
+      name: 'includeCommonjs',
+      message: 'CommonJS library?',
+      default: true
     }];
 
     this.prompt(prompts, function(answers) {
@@ -96,13 +123,14 @@ module.exports = yeoman.generators.Base.extend({
         return features && features.indexOf(feat) !== -1;
       }
 
-      this.taskRunner     = answers.taskRunner;
-      this.css            = answers.css;
-      this.includeJQuery  = answers.includeJQuery;
-      this.jqueryVersion  = answers.jqueryVersion;
-      this.includeAngular = answers.includeAngular;
-      this.angularVersion = answers.angularVersion;
-      this.includeItcss   = answers.includeItcss;
+      this.taskRunner       = answers.taskRunner;
+      this.css              = answers.css;
+      this.includeJQuery    = answers.includeJQuery;
+      this.jqueryVersion    = answers.jqueryVersion;
+      this.includeAngular   = answers.includeAngular;
+      this.angularVersion   = answers.angularVersion;
+      this.includeItcss     = answers.includeItcss;
+      this.includeCommonjs  = answers.includeCommonjs;
 
       done();
     }.bind(this));
@@ -149,7 +177,8 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('_bower.json'),
         this.destinationPath('bower.json'), {
           name: this.props.name,
-          includeItcss: this.includeItcss
+          includeItcss: this.includeItcss,
+          includeCommonjs: this.includeCommonjs
         }
       );
       this.fs.copy(
@@ -194,31 +223,52 @@ module.exports = yeoman.generators.Base.extend({
 
     css: function () {
 
-      switch(this.css) {
-        case 'includeSCSS':
-          mkdirp('source/assets/scss');
-          this.fs.copy(
-            this.templatePath('itcss/scss/style.scss'),
-            this.destinationPath('source/assets/scss/style.scss')
-          );
+      if(this.includeItcss) {
+        switch(this.css) {
+          case 'includeSCSS':
+            mkdirp('source/assets/scss');
+            this.fs.copy(
+              this.templatePath('itcss/scss/style.scss'),
+              this.destinationPath('source/assets/scss/style.scss')
+            );
 
-          break;
-        case 'includeLess':
-          mkdirp('source/assets/less');
-          this.fs.copy(
-            this.templatePath('itcss/less/style.less'),
-            this.destinationPath('source/assets/less/style.less')
-          );
+            break;
+          case 'includeLess':
+            mkdirp('source/assets/less');
+            this.fs.copy(
+              this.templatePath('itcss/less/style.less'),
+              this.destinationPath('source/assets/less/style.less')
+            );
 
-          break;
-        case 'includeStylus':
-          mkdirp('source/assets/styl');
-          this.fs.copy(
-            this.templatePath('itcss/styl/style.styl'),
-            this.destinationPath('source/assets/styl/style.styl')
-          );
+            break;
+          case 'includeStylus':
+            mkdirp('source/assets/styl');
+            this.fs.copy(
+              this.templatePath('itcss/styl/style.styl'),
+              this.destinationPath('source/assets/styl/style.styl')
+            );
 
-          break;
+            break;
+        }
+      } else {
+        switch(this.css) {
+          case 'includeSCSS':
+            mkdirp('source/assets/scss');
+
+            break;
+          case 'includeLess':
+            mkdirp('source/assets/less');
+
+            break;
+          case 'includeStylus':
+            mkdirp('source/assets/styl');
+
+            break;
+          default:
+            mkdirp('source/assets/css');
+
+            break;
+        }
       }
     },
 
