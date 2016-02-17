@@ -20,8 +20,8 @@ After:
 
 ```
 npm install -g generator-prime-frontend
+yo prime-frontend
 ```
-- yo prime-frontend
 
 or
 
