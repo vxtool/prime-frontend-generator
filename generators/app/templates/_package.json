@@ -16,10 +16,18 @@
 <% } -%>
 <% if (taskRunner === 'includeGrunt') { -%>
       "grunt": ">=0.4.5",
+      "grunt-contrib-clean": "^0.7.0",
+      <% if (css === 'includeSCSS') { -%>
+      "grunt-sass": "^1.0.0",
+      <% } -%>
       "load-grunt-config": "^0.19.1"
 <% } -%>
 <% if (taskRunner === 'includeGulp') { -%>
       "gulp": "^3.9.0",
+      "gulp-clean": "^0.3.1",
+      <% if (css === 'includeSCSS') { -%>
+      "gulp-sass": "^2.1.0",
+      <% } -%>
       "gulp-load-tasks": "^0.8.4"
 <% } -%>
     }

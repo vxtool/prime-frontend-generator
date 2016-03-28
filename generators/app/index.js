@@ -164,6 +164,7 @@ module.exports = yeoman.generators.Base.extend({
         {
           name: this.props.name,
           taskRunner: this.taskRunner,
+          css: this.css,
           includeJQuery: this.includeJQuery,
           includeAngular: this.includeAngular,
           jqueryVersion: this.jqueryVersion,
