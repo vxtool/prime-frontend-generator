@@ -1,14 +1,14 @@
 # Prime Frontend Generator
 
 [![licence mit](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://hemersonvianna.mit-license.org/)
-[![issues](https://img.shields.io/github/issues/prime-solutions/prime-frontend-generator.svg?style=flat-square)](https://github.com/prime-solutions/prime-frontend-generator/issues)
-[![GitHub release](https://img.shields.io/github/release/prime-solutions/prime-frontend-generator.svg?style=flat-square)](https://github.com/prime-solutions/prime-frontend-generator/releases)
+[![issues](https://img.shields.io/github/issues/descco-tools/prime-frontend-generator.svg?style=flat-square)](https://github.com/descco-tools/prime-frontend-generator/issues)
+[![GitHub release](https://img.shields.io/github/release/descco-tools/prime-frontend-generator.svg?style=flat-square)](https://github.com/descco-tools/prime-frontend-generator/releases)
 [![npm](https://img.shields.io/npm/dt/generator-prime-frontend.svg?style=flat-square)](https://www.npmjs.com/package/generator-prime-frontend)
-[![devDependency Status](https://img.shields.io/david/dev/prime-solutions/prime-frontend-generator.svg?style=flat-square)](https://david-dm.org/prime-solutions/prime-frontend-generator#info=devDependencies)
+[![devDependency Status](https://img.shields.io/david/dev/descco-tools/prime-frontend-generator.svg?style=flat-square)](https://david-dm.org/descco-tools/prime-frontend-generator#info=devDependencies)
 
 ## Traduções
 
-* [ORIGINAL](https://github.com/prime-solutions/prime-frontend-generator/)
+* [ORIGINAL](https://github.com/descco-tools/prime-frontend-generator/)
 
 ## Instalação
 

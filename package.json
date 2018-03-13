@@ -3,19 +3,18 @@
   "version": "0.1.0",
   "description": "Starting Front-end Project with Yeoman",
   "license": "MIT",
-  "main": "app/index.js",
   "homepage": "",
   "author": {
     "name": "Hemerson Vianna",
     "email": "hemerson.lourenco@gmail.com",
-    "url": "http://hemersonvianna.io"
+    "url": "http://descco.io"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/prime-solutions/prime-frontend-generator.git"
+    "url": "https://github.com/descco-tools/prime-frontend-generator.git"
   },
   "bugs": {
-    "url": "https://github.com/prime-solutions/prime-frontend-generator/issues"
+    "url": "https://github.com/descco-tools/prime-frontend-generator/issues"
   },
   "scripts": {
     "test": "mocha"
@@ -23,7 +22,7 @@
   "files": [
     "generators"
   ],
-  "main": "generators\\index.js",
+  "main": "generators/index.js",
   "keywords": [
     "front",
     "frontend",
