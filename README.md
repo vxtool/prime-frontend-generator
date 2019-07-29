@@ -1,10 +1,12 @@
 # Prime Frontend Generator
 
 [![licence mit](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://hemersonvianna.mit-license.org/)
-[![issues](https://img.shields.io/github/issues/descco-tools/prime-frontend-generator.svg?style=flat-square)](https://github.com/descco-tools/prime-frontend-generator/issues)
-[![GitHub release](https://img.shields.io/github/release/descco-tools/prime-frontend-generator.svg?style=flat-square)](https://github.com/descco-tools/prime-frontend-generator/releases)
-[![npm](https://img.shields.io/npm/dt/generator-prime-frontend.svg?style=flat-square)](https://www.npmjs.com/package/generator-prime-frontend)
-[![devDependency Status](https://img.shields.io/david/dev/descco-tools/prime-frontend-generator.svg?style=flat-square)](https://david-dm.org/descco-tools/prime-frontend-generator#info=devDependencies)
+[![GitHub issues](https://img.shields.io/github/issues/org-victorinox/prime-frontend-generator.svg)](https://github.com/org-victorinox/prime-frontend-generator/issues)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/org-victorinox/prime-frontend-generator.svg)
+![GitHub Release Date](https://img.shields.io/github/release-date/org-victorinox/prime-frontend-generator.svg)
+![GitHub top language](https://img.shields.io/github/languages/top/org-victorinox/prime-frontend-generator.svg)
+![GitHub repo size](https://img.shields.io/github/repo-size/org-victorinox/prime-frontend-generator.svg)
+![GitHub All Releases](https://img.shields.io/github/downloads/org-victorinox/prime-frontend-generator/total.svg)
 
 ## Translations
 
@@ -41,7 +43,7 @@ or
 
 ## Log
 
-Check [Releases](https://github.com/descco-tools/prime-frontend-generator/releases) for detailed changelog.
+Check [Releases](https://github.com/org-victorinox/prime-frontend-generator/releases) for detailed changelog.
 
 ## License
 
